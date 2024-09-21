@@ -1,44 +1,33 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <style>
-            nav{
-                background: linear-gradient(to left,rgb(0, 0, 0, 0.5),rgba(0, 0, 0, 0.2),rgb(0, 0, 0));
-                width: 100%;
-                height: 60px;
-                margin-left: 0px;
-                padding-left: 0px;
-                color: rgb(255, 255, 255);
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  href="./main.css"> <link/>
+</head>
+<body>
+    <div id="screen">
+        <button class="jet" onclick="go()">Jet Stream Mode</button>
+        <div id="container">
+            <div class="card" style="--number:4"></div>
+            <div class="card" style="--number:3"></div>
+            <div class="card" style="--number:2"></div>
+            <div class="card" style="--number:1"></div>
+            <div class="card" style="--number:-1"></div>
+            <div class="card" style="--number:-2"></div>
+            <div class="card" style="--number:-3"></div>
+            <div class="card" style="--number:-4"></div>
+        </div>
+    </div>
+    <script>
+        function go() {
+            let elements = document.getElementsByClassName("card");
+
+            for (let i = 0; i < elements.length; i++) {
+                elements[i].style.backgroundImage = "url('b.jpg')";
             }
-            .banner{
-                font-size: 30px;
-                float: left;
-                width: 150px;
-                height: 80px;
-                color: rgb(255, 255, 255);
-                margin-left: 10px;
-                margin-top: 10px;
-                text-shadow: 2px 2px 5px rgb(185, 185, 185);
-                text-align: center;
-            }
-            body{
-                background: linear-gradient(to right, rgb(71, 71, 71), rgb(129, 129, 129));
-                width: 100%;
-                height: 100%;
-            }
-        </style>
-    </head>
-    <body>
-        <nav>
-            <div id="list">
-                <ul type="none">
-                    <li class="banner" onclick="document.location.assign('https://prokaungminthant.github.io');"> Home </li>
-                    <li class="banner" > Friends </li>
-                    <li class="banner" >  friend_001 </li>
-                    <li class="banner" > About me </li>
-                 </ul>
-            </div>
-        </nav>
-        <script></script>
-    </body>
+
+        }
+    </script>
+</body>
 </html>
