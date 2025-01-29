@@ -24,9 +24,13 @@
 			<style>body {overflow: auto !important;}#main {opacity: 1.0 !important;transform: none !important;transition: none !important;filter: none !important;}#main > .inner > section {opacity: 1.0 !important;transform: none !important;transition: none !important;filter: none !important;}#main > .inner > section > * {opacity: 1.0 !important;transform: none !important;transition: none !important;filter: none !important;}</style>
 		</noscript>
 		<style>
-            .kmt_1 li:not(:hover){
-                filter: blur(5px) brightness(0.5);
+            .kmt_1:not(:hover) li{ 
+                filter: blur(0px) brightness(1) !important; 
+				animation: shuffle 3s infinite alternate ease-in-out;
                 transition: 1s;
+            }            
+			.kmt_1 li:not(:hover){ 
+                filter: blur(5px) brightness(0.5);
             }
             .kmt_1 li:hover{
                 transform: translateZ(200px);
@@ -35,7 +39,25 @@
                 transform-style: preserve-3d;
                 transform: perspective(1000px);
             }
-        </style>
+
+			@keyframes shuffle {
+  0% {
+    transform: rotate3d(1, 1, 0, 0deg) translate3d(0, 0, 0);
+  }
+  25% {
+    transform: rotate3d(1, 1, 0, 90deg) translate3d(20px, 50px, 30px);
+  }
+  50% {
+    transform: rotate3d(1, 0, 1, 180deg) translate3d(-30px, -40px, -50px);
+  }
+  75% {
+    transform: rotate3d(0, 1, 1, 270deg) translate3d(50px, -20px, 20px);
+  }
+  100% {
+    transform: rotate3d(1, 1, 1, 360deg) translate3d(0, 0, 0);
+  }
+}
+		</style>
 	</head>
 	<body class="is-ready">
 		<div id="wrapper">
